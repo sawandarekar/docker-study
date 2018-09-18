@@ -1,0 +1,10 @@
+Agenda:
+
+1.What/Why/Where is Docker? - DONE
+2.Deploy Simple jar - DONE
+3.Deploy Spring Boot jar - DONE
+4.Deploy War file
+5.Rolling Deploy
+6.Multiple nodes
+7.load balancing
+8.How to change Configuration files

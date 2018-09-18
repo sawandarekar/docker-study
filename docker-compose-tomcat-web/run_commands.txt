@@ -1,0 +1,5 @@
+# Run Commands
+
+docker build -t tomcat-tomcat-web .
+
+docker run -p 8080:8080 tomcat-tomcat-web

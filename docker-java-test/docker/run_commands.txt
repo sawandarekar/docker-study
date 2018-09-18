@@ -1,0 +1,5 @@
+# Run Commands
+
+docker build -t docker-java-test .
+
+docker run docker-java-test

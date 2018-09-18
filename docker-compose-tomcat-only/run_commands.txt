@@ -1,0 +1,5 @@
+# Run Commands
+
+docker-compose build -i -t docker-compose-tomcat-only .
+
+docker-compose up -d
