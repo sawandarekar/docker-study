@@ -1,0 +1,5 @@
+#FROM java:8
+FROM openjdk:8u131-jdk-alpine
+COPY docker-java-test-0.0.1-SNAPSHOT.jar /usr/local/docker-java-test.jar
+WORKDIR /usr/local/
+ENTRYPOINT ["java","-jar","/usr/local/docker-java-test.jar"]
