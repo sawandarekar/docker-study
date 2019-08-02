@@ -3,38 +3,52 @@ It contains java, web project and docker commands
 
 https://docs.docker.com/engine/reference/commandline/docker/
 
-`docker --version`
-`docker info`
-`docker ps`   #- list all running containers
-`docker exec -i  -t <CONTAINER ID> /bin/bash`     # ssh to docker container
+- `docker --version`
+- `docker info`
+- `docker ps`   #- list all running containers
+- `docker exec -i  -t <CONTAINER ID> /bin/bash`     # ssh to docker container
 
-###### ORIENTATION--cheat-sheet-optional ##############
+### ORIENTATION--cheat-sheet-optional ##############
+- `docker run hello-world`       # run Docker
 
-`docker run hello-world`       # run Docker
+### List Docker containers (running, all, all in quiet mode)
+- `docker container ls`
+- `docker container ls --all`
+- `docker container ls -a -q`
 
-# List Docker containers (running, all, all in quiet mode)
-`docker container ls`
-`docker container ls --all`
-`docker container ls -a -q`
-
-###### CONTAINER--cheat-sheet-optional ##############
-
+### CONTAINER--cheat-sheet-optional ##############
 `docker build -t friendlyhello .`  												# Create image using this directory's dockerfile
+
 `docker tag optimus-ui:latest`
+
 `docker run image_name:TAG`   														#- run the image
+
 `docker run -p 4000:80 friendlyhello`  										# Run "friendlyname" mapping port 4000 to 80
+
 `docker run -d -p 4000:80 friendlyhello`    							# Same thing, but in detached mode
+
 `docker container ls`                       							# List all running containers
+
 `docker container ls -a`            											# List all containers, even those not running
+
 `docker container stop <hash>`           									# Gracefully stop the specified container
+
 `docker container kill <hash>`         										# Force shutdown of the specified container
+
 `docker container rm <hash>`        											# Remove specified container from this machine
+
 `docker container rm $(docker container ls -a -q)`        # Remove all containers
+
 `docker image ls -a`                             					# List all images on this machine
+
 `docker image rm <image id>`            									# Remove specified image from this machine
+
 `docker image rm $(docker image ls -a -q)`  							# Remove all images from this machine
+
 `docker image prune`  																		# remove unused images
+
 `docker rmi  <IMAGE ID>`   														    # remove docker image
+
 `docker rm -v $(docker ps -a -q -f status=exited)`        # remove the exited containers
 
 ###### SERVICES--cheat-sheet-optional ##############
@@ -55,9 +69,9 @@ https://docs.docker.com/engine/reference/commandline/docker/
 
 `docker kill $(docker ps -q)`															#stop all containers:
 `docker rm $(docker ps -aq)`															#remove all containers:
-`docker rmi $(docker images -aq)``													#remove all docker images:
+`docker rmi $(docker images -aq)`													#remove all docker images:
 
-`docker image tag hello:1 hello:latest
+`docker image tag hello:1 hello:latest`
 `docker run -p 5000:5000 --restart always/unless-stopped --name registry registry:2.6.0`
 
 `docker run -p 3333:3333 --env DIR=/usr/share/optimus --env OPEN_REFINE_MEMORY=1024M open-refine:dir-as-parameter`
