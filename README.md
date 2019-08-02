@@ -8,16 +8,16 @@ https://docs.docker.com/engine/reference/commandline/docker/
 - `docker ps`   #- list all running containers
 - `docker exec -i  -t <CONTAINER ID> /bin/bash`     # ssh to docker container
 
-### ORIENTATION--cheat-sheet-optional ##############
+##### ORIENTATION--cheat-sheet-optional ##############
 
 - `docker run hello-world`       # run Docker
 
-### List Docker containers (running, all, all in quiet mode)
+##### List Docker containers (running, all, all in quiet mode)
 - `docker container ls`
 - `docker container ls --all`
 - `docker container ls -a -q`
 
-### CONTAINER--cheat-sheet-optional ##############
+##### CONTAINER--cheat-sheet-optional
 - `docker build -t friendlyhello .`  												# Create image using this directory's dockerfile
 - `docker tag optimus-ui:latest`
 - `docker run image_name:TAG`   														#- run the image
@@ -36,7 +36,7 @@ https://docs.docker.com/engine/reference/commandline/docker/
 - `docker rmi  <IMAGE ID>`   														    # remove docker image
 - `docker rm -v $(docker ps -a -q -f status=exited)`        # remove the exited containers
 
-###### SERVICES--cheat-sheet-optional ##############
+##### SERVICES--cheat-sheet-optional
 - `docker stack ls`                                         # List stacks or apps
 - `docker stack deploy -c <composefile> <appname>`  				# Run the specified Compose file
 - `docker service ls`                												# List running services associated with an app
@@ -51,7 +51,6 @@ https://docs.docker.com/engine/reference/commandline/docker/
 - `docker-compose build`
 - `docker-compose build --force-rm --no-cache`
 - `docker-compose up -d`                                		# start the container
-
 - `docker kill $(docker ps -q)`															#stop all containers:
 - `docker rm $(docker ps -aq)`															#remove all containers:
 - `docker rmi $(docker images -aq)`													#remove all docker images:
