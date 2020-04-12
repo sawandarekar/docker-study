@@ -58,3 +58,7 @@ Docker image tag hello:1 hello:latest
 Docker run -p 5000:5000 --restart always/unless-stopped --name registry registry:2.6.0
 
 docker run -p 3333:3333 --env DIR=/usr/share/optimus --env OPEN_REFINE_MEMORY=1024M 077978206904.dkr.ecr.eu-west-1.amazonaws.com/open-refine:dir-as-parameter
+
+docker run -d --name couchbase -h "couchbase.local" -p 8091-8094:8091-8094 -p 11210:11210 -v C:/etc/couchbase:/opt/couchbase/var couchbase:community-6.0.0
+
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' couchbase

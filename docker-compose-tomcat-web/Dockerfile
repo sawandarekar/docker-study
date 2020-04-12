@@ -1,7 +1,7 @@
 #tomcat images
 FROM tomcat:8.0.50-jre8
 
-MAINTAINER sawan darekar <sawan.darekar@tomtom.com>
+MAINTAINER sawan darekar <sawandarekar@gmail.com>
 
 
 #COPY docker-spring-boot-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/docker-spring-boot.war
